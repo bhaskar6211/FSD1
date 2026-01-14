@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Tag Examples</title>
+</head>
+<body>
+  <header>
+    <h1>HTML Tag Examples</h1>
+    <p><strong>Purpose:</strong> A compact page demonstrating many common HTML tags with minimal JS/CSS.</p>
+  </header>
+
+  <nav>
+    <a href="#text">Text</a> | <a href="#lists">Lists</a> | <a href="#media">Media</a> | <a href="#forms">Forms</a>
+  </nav>
+
+  <main>
+    <section id="text">
+      <h2>Text & Semantic Elements</h2>
+      <p>This is a <strong>strong</strong> and <em>emphasized</em> sentence. Use <code>&lt;abbr&gt;</code> for abbreviations like <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+      <p>Quotation: <q>Inline quote</q>. Block quote:</p>
+      <blockquote cite="https://example.com">This is a blockquote with a citation.</blockquote>
+
+      <p>Inline code: <code>console.log('hi')</code>. Keyboard input: <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+      <p>Inserted: <ins>added text</ins>, Deleted: <del>removed text</del>, Highlight: <mark>important</mark>.</p>
+
+      <p>Subscript H<sub>2</sub>O and superscript x<sup>2</sup>.</p>
+      <p><small>Small print using &lt;small&gt;.</small></p>
+    </section>
+
+    <section id="headings">
+      <h2>Headings</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+
+    <section id="lists">
+      <h2>Lists</h2>
+      <div class="row">
+        <div class="box">
+          <h3>Unordered</h3>
+          <ul>
+            <li>Item one</li>
+            <li>Item two<ul><li>Nested A</li><li>Nested B</li></ul></li>
+            <li>Item three</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Ordered</h3>
+          <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+          </ol>
+        </div>
+
+        <div class="box">
+          <h3>Description</h3>
+          <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="tables">
+      <h2>Tables</h2>
+      <table border="1" cellpadding="6">
+        <caption>Example table</caption>
+        <thead><tr><th>Animal</th><th>Sound</th></tr></thead>
+        <tbody>
+          <tr><td>Cat</td><td>Meow</td></tr>
+          <tr><td>Dog</td><td>Woof</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="2">Footer</td></tr></tfoot>
+      </table>
+    </section>
+
+    <section id="media">
+      <h2>Images, Audio, Video & Canvas</h2>
+      <figure style="max-width:360px">
+        <img src="https://via.placeholder.com/320x120.png?text=placeholder" alt="placeholder image">
+        <figcaption>Figure caption using &lt;figure&gt; and &lt;figcaption&gt;.</figcaption>
+      </figure>
+
+      <h3>Audio / Video</h3>
+      <audio controls>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <br>
+      <video controls width="320">
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Canvas</h3>
+      <canvas id="myCanvas" width="320" height="80" style="border:1px solid #ccc"></canvas>
+
+      <h3>Inline SVG</h3>
+      <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="108" height="68" fill="#f6f6f6" stroke="#333"/>
+        <circle cx="60" cy="40" r="18" fill="#1e90ff" />
+      </svg>
+    </section>
+
+    <section id="forms">
+      <h2>Forms & Inputs</h2>
+      <form id="demoForm">
+        <label for="text">Text</label>
+        <input id="text" name="text" type="text" placeholder="Enter text"><br>
+
+        <label>Radio</label>
+        <label><input type="radio" name="r" value="a"> A</label>
+        <label><input type="radio" name="r" value="b"> B</label><br>
+
+        <label>Checkbox</label>
+        <label><input type="checkbox" name="c" value="1"> Option</label><br>
+
+        <label for="range">Range</label>
+        <input id="range" type="range" min="0" max="100" value="45"><br>
+
+        <label for="select">Select</label>
+        <select id="select"><option>One</option><option>Two</option></select><br>
+
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" rows="3"></textarea><br>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p>Progress: <progress id="progress" max="100" value="20"></progress></p>
+      <p>Meter: <meter min="0" max="100" value="0.6">60%</meter></p>
+      <p>Output: <output id="out">n/a</output></p>
+
+      <p>Time: <time datetime="2026-01-15">Jan 15, 2026</time></p>
+    </section>
+
+    <section id="interactive">
+      <h2>Interactive / Misc</h2>
+      <details>
+        <summary>Click to expand</summary>
+        <p>Details + summary example.</p>
+      </details>
+
+      <p><a href="https://example.com" target="_blank" rel="noopener">External link</a> and an <abbr title="Hypertext Markup Language">HTML</abbr> example above.</p>
+
+      <p>Embed / object / iframe:</p>
+      <iframe srcdoc="&lt;p&gt;Iframe content&lt;/p&gt;" width="300" height="80" title="demo iframe"></iframe>
+
+      <noscript><p><strong>JavaScript is disabled.</strong></p></noscript>
+
+      <template id="tmpl"><p>Template content (not rendered until cloned).</p></template>
+    </section>
+
+  </main>
+
+  <aside>
+    <h3>Aside</h3>
+    <p>Use &lt;aside&gt; for tangential content such as notes, ads, or sidebars.</p>
+  </aside>
+
+  <footer>
+    <p>Footer: Example page demonstrating many HTML tags. Last updated: <time datetime="2026-01-15">2026-01-15</time>.</p>
+  </footer>
+</body>
+</html>
