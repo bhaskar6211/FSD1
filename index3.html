@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1b2b3a);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #fff;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .shape.one {
+            width: 180px;
+            height: 180px;
+            background: #4cc9f0;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .shape.two {
+            width: 120px;
+            height: 120px;
+            background: #f72585;
+            bottom: 15%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .shape.three {
+            width: 90px;
+            height: 90px;
+            background: #ffd166;
+            top: 65%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+        
+        .welcome-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 60px 45px;
+            text-align: center;
+            width: 420px;
+            max-width: 90%;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeUp 1.2s ease forwards;
+        }
+        
+        .welcome-card h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .welcome-card p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        
+        .welcome-card button {
+            background: linear-gradient(135deg, #4cc9f0, #4895ef);
+            border: none;
+            padding: 14px 34px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(76, 201, 240, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .welcome-card button:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 18px 40px rgba(76, 201, 240, 0.6);
+        }
+        
+        .welcome-card span {
+            display: block;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+    <div class="shape three"></div>
+
+    <div class="welcome-card">
+        <h1>Welcome Aboard 🚀</h1>
+        <p>
+            Step into a smarter, faster, and beautifully designed experience. Let’s build something amazing together.
+        </p>
+        <button>Enter Platform</button>
+        <span>© 2026 Your Brand</span>
+    </div>
+
+</body>
+
+</html>
