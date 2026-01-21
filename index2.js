@@ -46,7 +46,7 @@ function calculator(a, b, operation) {
             return 'Error: Invalid operation';
     }    
 }
-console.log(calculator(10, 5, 'add'));
-console.log(calculator(10, 5, 'subtract'));
-console.log(calculator(10, 5, 'multiply'));
-console.log(calculator(10, 5, 'divide'));
+let a=prompt("Enter first number:");
+let b=prompt("Enter second number:");
+let operation=prompt("Enter operation: add, subtract, multiply, divide: ");
+document.writeln(calculator(a, b, operation));
