@@ -7,7 +7,7 @@ console.log(a);
 
 */
 
-const { step } = require("@tensorflow/tfjs-core");
+// const { step } = require("@tensorflow/tfjs-core");
 
 /*console.log(a);
 var a=9;
@@ -46,7 +46,25 @@ setTimeout(()=>{console.log("Fn, ran after 2")},2000);
 console.log("end");*/
 
 //callback hell
-function steps(step, callback){
-    setTimeout(()=>{console.log("STEP"+step); callback(); },4000);
+//function steps(step, callback){
+//    setTimeout(()=>{console.log("STEP"+step); callback(); },4000);
+//}
+//steps(1,()=>steps(2,()=>steps(3,()=>console.log("done"))));
+
+//28/01/2026
+
+/*function steps(step){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            {console.log("steps:"+step);
+            resolve();}
+        },2000);
+    });
 }
-steps(1,steps(2,steps(3)));
+steps(1).then(()=>steps(2)).then(()=>steps(3)).then(()=>console.log("done"));*/
+
+function stepsPromise(step){
+   return new Promise((resolve,reject)=>{setTimeout(()=>{console.log("PromiseStep:"+step); resolve();},4000);})
+}
+stepsPromise(1).then(
+    ()=>stepsPromise(2).then(()=>stepsPromise(3).then(()=>console.log("Done"))));
